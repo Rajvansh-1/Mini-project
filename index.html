@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Recyclable Plastic from Milk and Vinegar (Casein Plastic) - Detailed Project Report</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <style>
+    /* Reset and base */
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #cdeccd 0%, #9fc4a6 100%);
+      color: #264653;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    a {
+      color: #2a9d8f;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    a:hover, a:focus {
+      color: #1f776e;
+      outline: none;
+    }
+    header, footer {
+      background: #264653cc;
+      color: #f4f1de;
+      width: 100%;
+      padding: 1.5rem 3rem;
+      text-align: center;
+      user-select: none;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+    header h1 {
+      font-size: 2.75rem;
+      font-weight: 700;
+      margin: 0;
+      letter-spacing: 1px;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    }
+    header .subtitle {
+      font-weight: 500;
+      color: #a8dadc;
+      margin-top: 6px;
+      font-size: 1.15rem;
+      font-style: italic;
+    }
+    main {
+      flex-grow: 1;
+      max-width: 900px;
+      margin: 2rem auto 4rem;
+      background: #f4f1de;
+      border-radius: 16px;
+      box-shadow: 0 10px 40px rgba(102,105,51,0.3);
+      padding: 48px 48px 56px;
+      line-height: 1.75;
+      color: #1a3c40;
+    }
+    .front-page {
+      max-width: 700px;
+      margin: 2rem auto 4rem;
+      background: #e9f1df;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(42,157,143,0.25);
+      padding: 64px 48px 72px;
+      text-align: center;
+      color: #264653;
+    }
+    .front-page h2 {
+      font-weight: 700;
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      letter-spacing: 0.8px;
+    }
+    .front-page p {
+      font-size: 1.25rem;
+      margin: 8px 0;
+    }
+    .front-page .details {
+      margin-top: 4rem;
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: #2a9d8f;
+    }
+    section {
+      margin-bottom: 4rem;
+    }
+    h2.section-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #2a9d8f;
+      margin-bottom: 1.8rem;
+      border-left: 10px solid #264653;
+      padding-left: 18px;
+      text-shadow: 0 1px 1px rgba(42,157,143,0.4);
+    }
+    p, li {
+      font-size: 1.2rem;
+      color: #264653;
+    }
+    ul {
+      margin: 1rem 0 2.2rem 2.2rem;
+      color: #264653;
+    }
+    ul li {
+      margin-bottom: 0.85rem;
+    }
+    ol {
+      margin-left: 2.2rem;
+      color: #264653;
+    }
+    ol li {
+      margin-bottom: 1rem;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 14px;
+      box-shadow: 0 8px 20px rgba(38,70,83,0.18);
+      margin: 2rem 0;
+    }
+    .figure-caption {
+      text-align: center;
+      font-style: italic;
+      font-size: 1rem;
+      color: #52796f;
+      margin-bottom: 3rem;
+    }
+    .important {
+      background: #264653ee;
+      color: #f4f1de;
+      font-weight: 700;
+      padding: 16px 24px;
+      margin: 2rem 0;
+      border-radius: 12px;
+      box-shadow: 0 6px 24px rgba(38, 70, 83, 0.4);
+      user-select: text;
+      font-size: 1.2rem;
+    }
+    @media (max-width: 768px){
+      main {
+        padding: 36px 28px 48px;
+        margin: 1rem 1rem 4rem;
+        font-size: 1rem;
+      }
+      .front-page {
+        padding: 56px 28px 64px;
+        margin: 1rem;
+      }
+      header h1 {
+        font-size: 2.3rem;
+      }
+      h2.section-title {
+        font-size: 2rem;
+        padding-left: 12px;
+        border-left-width: 6px;
+      }
+    }
+    @media (max-width: 400px){
+      main {
+        padding: 28px 20px 40px;
+      }
+      .front-page {
+        padding: 40px 20px 56px;
+      }
+    }
+    .icon {
+      vertical-align: middle;
+      font-size: 1.8rem;
+      color: #2a9d8f;
+      margin-right: 10px;
+      user-select: none;
+      position: relative;
+      top: 0.25rem;
+    }
+    footer {
+      font-size: 1rem;
+      color: #264653cc;
+      text-align: center;
+      padding-bottom: 2rem;
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+  <header role="banner" aria-label="Project Report Header">
+    <h1>Recyclable Plastic from Milk and Vinegar</h1>
+    <p class="subtitle">Casein Plastic: Sustainable Material Science Project</p>
+  </header>
+
+  <article>
+    <section class="front-page" aria-label="Project Front Page">
+      <h2>Recyclable Plastic from Milk and Vinegar</h2>
+      <p><strong>Project Topic:</strong> Casein Plastic - Making Recyclable Plastic Using Milk and Vinegar</p>
+      <p><strong>Student Name:</strong> <br>Rohit Suwalka <br>   Rajvansh <br>   Prince Kumar</p>
+      <p><strong>Branch &amp; Section:</strong> [C.S.E / N]</p>
+      <p><strong>Date:</strong> 16-06-2025</p>
+    </section>
+
+    <main role="main">
+      <section aria-labelledby="introduction-title">
+        <h2 class="section-title" id="introduction-title"><span class="material-icons icon" aria-hidden="true">eco</span>Introduction</h2>
+        <p>
+          Casein plastic is a biodegradable and recyclable material derived from milk proteins and vinegar as an acidifier. It represents an early form of natural plastic made by precipitating casein proteins from acidic milk and molding them into a durable, plastic-like substance.
+        </p>
+        <p>
+          This material is of great interest as an eco-friendly alternative to conventional synthetic plastics, which are predominantly petroleum-based and contribute heavily to environmental pollution.
+        </p>
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/44bce5f5-1c32-4746-9bc9-c5059114972b.png" alt="Smooth white sheet of biodegradable casein plastic made from milk and vinegar shown on a natural background" />
+        <p class="figure-caption">Figure 1: Sample biodegradable casein plastic sheet created from milk and vinegar.</p>
+      </section>
+
+      <section aria-labelledby="background-title">
+        <h2 class="section-title" id="background-title"><span class="material-icons icon" aria-hidden="true">science</span>Background and Theory</h2>
+        <p>
+          Milk contains proteins called caseins which form micelles suspended in water. When an acidic substance like vinegar (acetic acid) is added to warmed milk, the pH lowers causing caseins to denature and coagulate (curdle).
+        </p>
+        <p>
+          This coagulation turns liquid milk into solid curds which can be collected and formed. The curds contain closely bonded protein chains that, once dried and compressed, form a strong material resembling plastic.
+        </p>
+        <p>
+          Casein plastics were historically used for buttons and jewelry before synthetic plastics were invented. Due to their natural origin, they are compostable and biodegradable.
+        </p>
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/378a63ff-e693-4db0-b40c-9465cbf79f81.png" alt="Simplified chemical illustration of milk proteins coagulating after vinegar addition forming curds" />
+        <p class="figure-caption">Figure 2: Chemical process of milk protein coagulation triggered by vinegar acidification.</p>
+      </section>
+
+      <section aria-labelledby="materials-methods-title">
+        <h2 class="section-title" id="materials-methods-title"><span class="material-icons icon" aria-hidden="true">construction</span>Materials and Methods</h2>
+        <p>
+          <strong>Materials Needed:</strong>
+        </p>
+        <ul>
+          <li>Whole milk - approximately 500 milliliters.</li>
+          <li>White vinegar (5% acetic acid) - roughly 4 tablespoons.</li>
+          <li>A heat source (stove or hotplate).</li>
+          <li>Glass or stainless steel saucepan.</li>
+          <li>Cheesecloth or fine strainer for curd separation.</li>
+          <li>Mixing bowl.</li>
+          <li>Wax paper or silicone sheet for shaping.</li>
+          <li>Weights or press to squeeze excess liquid.</li>
+          <li>Sanding paper or smooth surface for finishing.</li>
+        </ul>
+        <p>
+          <strong>Detailed Step-by-Step Procedure:</strong>
+        </p>
+        <ol>
+          <li><strong>Heat Milk:</strong> Pour 500 ml of whole milk into the saucepan and warm gently over medium heat, stirring occasionally to prevent scorching. Reach a temperature of around 85-90°C (just below boiling).</li>
+          <li><strong>Acid Addition:</strong> Gradually add 4 tablespoons of white vinegar to the hot milk, stirring slowly and continuously. You will see milk curdling as white lumps (curds) separate from the yellowish liquid (whey).</li>
+          <li><strong>Resting:</strong> Remove the pan from heat and allow to sit undisturbed for 5 minutes so complete coagulation occurs.</li>
+          <li><strong>Straining:</strong> Pour the mixture through a cheesecloth-lined strainer set over a bowl to collect the curds. Let it drain for 10 to 15 minutes.</li>
+          <li><strong>Pressing:</strong> Wrap the curds in the cheesecloth and press gently using weight or by squeezing with clean hands to remove excess whey, leaving a firm curd mass.</li>
+          <li><strong>Molding and Shaping:</strong> Transfer the curd mass onto wax paper or a silicone sheet, flattening it with a rolling pin or hands to desired thickness and shape. You can form sheets, buttons, or simple shapes.</li>
+          <li><strong>Drying and Hardening:</strong> Leave the molded casein plastic to dry at room temperature for 24 to 48 hours depending on humidity. Flip occasionally to ensure even drying. The plastic hardens and becomes stiff and smooth.</li>
+          <li><strong>Finishing:</strong> After fully dried, sand edges if desired for smoothness. Optionally polish with oil or wax for durability and shine.</li>
+          <li><strong>Storage:</strong> Store casein plastic products in dry, cool environments. They are moisture sensitive and biodegradable.</li>
+        </ol>
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d42a641a-c2ea-4008-9d1e-2225e27dc17d.png" alt="A saucepan heating milk on stove just before vinegar addition to initiate casein coagulation" />
+        <p class="figure-caption">Figure 3: Heating milk to near boiling before vinegar is added to start curdling.</p>
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/0d7f4ae7-070e-4a7a-b30a-2472d9a5a9d7.png" alt="Curds being separated from whey using cheesecloth in a strainer over a bowl" />
+        <p class="figure-caption">Figure 4: Straining formed curds from whey to collect coagulated casein.</p>
+      </section>
+
+      <section aria-labelledby="results-discussion-title">
+        <h2 class="section-title" id="results-discussion-title"><span class="material-icons icon" aria-hidden="true">fact_check</span>Results and Discussion</h2>
+        <p>
+          The formation of casein plastic is evidenced by the successful separation of curds and their transformation into a solid, moldable mass. Upon drying, the plastic exhibits:
+        </p>
+        <ul>
+          <li><strong>Durability:</strong> Hard, resilient plastic suitable for small artisan items.</li>
+          <li><strong>Flexibility:</strong> Some pliability before full drying allows shaping.</li>
+          <li><strong>Biodegradability:</strong> Readily compostable under natural conditions, unlike synthetic plastics.</li>
+          <li><strong>Recyclability:</strong> Can be partially re-softened and remolded by alkaline soaking.</li>
+        </ul>
+        <p>
+          <strong>Testing Properties:</strong>
+        </p>
+        <ul>
+          <li>Scratch and abrasion resistance tested by rubbing surfaces lightly.</li>
+          <li>Water sensitivity observed by brief water exposure and noting dissolution or damage.</li>
+          <li>Hardness assessed by pressing or bending parts.</li>
+        </ul>
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f2652c26-3086-4461-8da4-9249e8d0ceb6.png" alt="Someone molding and drying casein plastic shaped sheet on wax paper" />
+        <p class="figure-caption">Figure 5: Molding and drying casein plastic sheets in a lab setup.</p>
+        <p>
+          Limitations include sensitivity to moisture and low tolerance for heat. Enhancing stability can involve additives or coatings.
+        </p>
+      </section>
+
+      <section aria-labelledby="applications-title">
+        <h2 class="section-title" id="applications-title"><span class="material-icons icon" aria-hidden="true">public</span>Applications and Environmental Impact</h2>
+        <p>
+          Casein plastic provides a renewable alternative to petroleum-based plastics and offers several practical applications:
+        </p>
+        <ul>
+          <li>Eco-friendly buttons, beads, jewelry, and decorative articles.</li>
+          <li>Packaging materials that biodegrade naturally after disposal.</li>
+          <li>Educational kits and demonstrations on sustainable materials.</li>
+          <li>Potential prototype materials for biodegradable consumer goods.</li>
+        </ul>
+        <p>
+          Environmental benefits include:
+        </p>
+        <ul>
+          <li>Reduction of plastic pollution and microplastics in ecosystems.</li>
+          <li>Use of renewable, edible raw materials from dairy sources.</li>
+          <li>Compostability ensuring minimal waste persistence.</li>
+          <li>Lower carbon footprint compared to petroleum plastics.</li>
+        </ul>
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/459023da-11dd-4b25-afd6-e5dd39b6818f.png" alt="Infographic illustrating circular economy life cycle of biodegradable casein plastic with renewable sources and composting" />
+        <p class="figure-caption">Figure 6: Circular eco-friendly life cycle of casein plastic showing composting and sustainable sourcing.</p>
+      </section>
+
+      <section aria-labelledby="conclusion-title">
+        <h2 class="section-title" id="conclusion-title"><span class="material-icons icon" aria-hidden="true">done_all</span>Conclusion</h2>
+        <p>
+          Casein plastic made from milk and vinegar is a promising biodegradable alternative to conventional plastics with a simple preparation process suitable for educational and small scale industrial settings.
+        </p>
+        <p>
+          Though limited by moisture sensitivity and modest mechanical strength, its sustainable sourcing, recyclability, and environmental friendliness make it valuable in reducing plastic pollution.
+        </p>
+        <p>
+          Further advancements in formulation and processing can expand its applicability, making casein plastic an important material in the transition towards sustainable materials science.
+        </p>
+      </section>
+    </main>
+  </article>
+
+  <footer role="contentinfo" aria-label="Page Footer">
+    <p>© 2025 Recyclable Plastic Project Report &mdash; Designed for clarity, sustainability, and modern accessibility</p>
+  </footer>
+</body>
+</html>
+
